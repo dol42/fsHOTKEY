@@ -7,6 +7,10 @@
 from pynput import keyboard
 from pynput.keyboard import Key, Controller
 kp = Controller()
+print("fs솔루션, delete키를 spacebar로 대체하는 프로그램입니다.(ver 0.1)")
+print("사용시 발생하는 문제는 개발자가 따로 책임지지 않습니다.")
+print("프로그램 실행중, 'esc'누르면 종료됩니다.")
+print("소스코드 공개 : https://github.com/dol42/fsHOTKEY/blob/master/fsstrans.py ")
 
 def on_press(key):
     return
@@ -14,6 +18,7 @@ def on_press(key):
 #중복키 방지를 위해 키보드에서 뗐을경우 실행하는 함수
 def on_release(key):
     if key == keyboard.Key.esc:
+        print("프로그램 종료")
         return False
     elif key == keyboard.Key.space:
         kp.press(keyboard.Key.delete)
@@ -21,7 +26,7 @@ def on_release(key):
 
 with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
     listener.join()
-
 # 키 후킹용 리스너 실행
 listener = keyboard.Listener(on_press=on_press,on_release=on_release)
 listener.start()
+
