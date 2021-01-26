@@ -8,7 +8,7 @@ import pynput
 import os
 
 kp = pynput.keyboard.Controller()
-print("fs솔루션, delete키를 spacebar로 대체하는 프로그램입니다.(ver 0.1)")
+print("delete키를 spacebar로 대체하는 프로그램입니다.(ver 0.1)")
 print("사용시 발생하는 문제는 개발자가 따로 책임지지 않습니다.")
 print("프로그램 실행중, 'esc'누르면 종료됩니다.")
 print("소스코드 공개 : https://github.com/dol42/fsHOTKEY/blob/master/fsstrans.py ")
