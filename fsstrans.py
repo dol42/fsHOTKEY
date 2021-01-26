@@ -26,11 +26,8 @@ def on_release(key):
         kp.press(pynput.keyboard.Key.delete)
         kp.release(pynput.keyboard.Key.delete)
 
-with pynput.keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
-    listener.join()
-
-
 # 키 후킹용 리스너 실행
 listener = pynput.keyboard.Listener(on_press=on_press,on_release=on_release)
 listener.start()
+
 os.system("pause")
